@@ -9,6 +9,11 @@
 import UIKit
 
 class QuizViewController: UIViewController {
+    
+    @IBOutlet var Button1: UIButton!
+    @IBOutlet var Button2: UIButton!
+    @IBOutlet var Button3: UIButton!
+    
     //クイズを格納する配列
     var quizArray = [[Any]]()
     
@@ -26,9 +31,14 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Button1.layer.cornerRadius = 20
+        Button2.layer.cornerRadius = 20
+        Button3.layer.cornerRadius = 20
+        
         //------------------------ここから下にクイズを書く------------------------//
         quizArray.append(["わだちがしたことのないバイトは？", "ラーメン屋", "ディズニーキャスト", "コールセンター", 3])
         quizArray.append(["わだちの小学校は？", "一小", "二小", "三小", 2])
+        quizArray.append(["わだちの専攻は？", "言語学", "教育学", "言語教育", 3])
         //------------------------ここから上にクイズを書く------------------------//
         
         //quizArrayの中身をシャッフルする

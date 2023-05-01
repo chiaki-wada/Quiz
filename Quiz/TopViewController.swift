@@ -9,11 +9,13 @@
 import UIKit
 
 class TopViewController: UIViewController {
+    
+    @IBOutlet var startButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        startButton.layer.cornerRadius = 20
     }
     
     @IBAction func back(segue: UIStoryboardSegue) {
